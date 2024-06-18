@@ -51,4 +51,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     // Lottie dependencies
     implementation("com.airbnb.android:lottie:6.0.0")
+    // Retrofit dependency
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    // converter for Gson
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }
