@@ -78,7 +78,6 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://api.openweathermap.org/data/2.5/")
             .build().create(ApiInterface::class.java)
-        Toast.makeText(this, cityName, Toast.LENGTH_SHORT).show()
         val response = retrofit.getWeatherData(cityName, "a781b0f59ce3888d0802fac2ee68cada", "metric")
         response.enqueue(object : Callback<WeatherApp> {
             @SuppressLint("SetTextI18n")
@@ -164,7 +163,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 "Clouds", "Partly Clouds", "Overcast" ->{
-                    binding.root.setBackgroundResource(R.drawable.cloudy)
+                    binding.root.setBackgroundResource(R.drawable.clouds)
                     binding.lottieAnimationView.setAnimation(R.raw.cloud)
                 }
                 "Snow", "Light Snow", "Heavy Snow", "Blizzard" ->{
